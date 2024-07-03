@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Victor Brandão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-links a {
+            transition: color 0.3s;
+        }
+        .contact-links a:hover {
+            color: #667eea;
+        }
+        .icon {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold">Victor Brandão</h1>
+            <p class="text-xl">Desenvolvedor</p>
+            <p class="text-lg mt-4">Estudante de Desenvolvimento de Sistemas e entusiasta de TI. Atualmente, estagiário na Secretaria de Educação de Paulista, focado em aprimorar a infraestrutura tecnológica e desenvolver minhas habilidades.</p>
+            <p class="text-lg">Comprometido com a segurança digital e fascinado pelo poder transformador da tecnologia.</p>
+            <div class="mt-6 contact-links flex justify-center space-x-6">
+                <a href="https://linkedin.com/in/victorbrandaao" target="_blank" class="text-3xl mx-3">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/victorbrandaao" target="_blank" class="text-3xl mx-3">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/seu-usuario" target="_blank" class="text-3xl mx-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="section bg-gray-100" id="about">
+        <h2>Sobre Mim</h2>
+        <p>Estudante de Desenvolvimento de Sistemas e entusiasta de TI, dedico meu estágio na Secretaria de Educação de Paulista a aprimorar não só a infraestrutura tecnológica, mas também meu conjunto de habilidades. Comprometido com a segurança digital e fascinado pelo poder transformador da tecnologia, busco continuamente integrar inovação e eficiência nos projetos que desenvolvo.</p>
+    </div>
+    <div class="section" id="work">
+        <h2>Trabalhos</h2>
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl font-bold mt-4">Projetos Pessoais</h3>
+            <div class="mt-4 text-left">
+                <p class="text-lg"><i class="fas fa-project-diagram icon"></i>App Tranquilamente: Desenvolvimento do backend em Python e SQLite com funcionalidades básicas de gerenciamento de dados.</p>
+                <p class="text-lg"><i class="fas fa-laptop-code icon"></i>Página para uma empresa: Criação do frontend usando HTML, CSS e JavaScript com design responsivo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section bg-gray-100" id="skills">
+        <h2>Competências Técnicas</h2>
+        <div class="max-w-4xl mx-auto text-left">
+            <p class="text-lg"><i class="fas fa-laptop icon"></i>Aprendendo sobre Python com Flask e SQLite.</p>
+            <p class="text-lg"><i class="fas fa-code icon"></i>Desenvolvimento Front-end (HTML, CSS e JavaScript).</p>
+            <p class="text-lg"><i class="fas fa-shield-alt icon"></i>Segurança de aplicações web e controle de versão (Git/Github).</p>
+            <p class="text-lg"><i class="fas fa-lightbulb icon"></i>Análise e solução de problemas.</p>
+        </div>
+    </div>
+    <div class="section" id="education">
+        <h2>Formação</h2>
+        <div class="max-w-4xl mx-auto text-left">
+            <p class="text-lg"><i class="fas fa-school icon"></i>COLÉGIO SANTA EMÍLIA (OLINDA) - Técnico em informática, integrado ao ensino. Conclusão em 12/2014</p>
+            <p class="text-lg"><i class="fas fa-university icon"></i>FACULDADE UNINASSAU - Análise e desenvolvimento de sistemas (cursando).</p>
+        </div>
+    </div>
+    <div class="section bg-gray-100" id="contact">
+        <h2>Contato</h2>
+        <div class="max-w-4xl mx-auto text-left">
+            <p class="text-lg"><i class="fas fa-phone-alt icon"></i>Telefone: (81) 99766-8766</p>
+            <p class="text-lg"><i class="fas fa-envelope icon"></i>Email: <a href="mailto:victorbrandaotech@gmail.com">victorbrandaotech@gmail.com</a></p>
+            <p class="text-lg"><i class="fab fa-linkedin icon"></i>LinkedIn: <a href="https://linkedin.com/in/victorbrandaao" target="_blank">linkedin.com/in/seu-perfil</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.contact-links a');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    link.classList.add('text-blue-500');
+                });
+                link.addEventListener('mouseleave', () => {
+                    link.classList.remove('text-blue-500');
+                });
+            });
+
+            const sections = document.querySelectorAll('.section');
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY + window.innerHeight;
+                sections.forEach(section => {
+                    if (scrollPos > section.offsetTop + section.clientHeight / 2) {
+                        section.classList.add('opacity-100', 'transform', 'translate-y-0');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
