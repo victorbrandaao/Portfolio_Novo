@@ -1,0 +1,84 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4A5568; /* Gray-700 */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #5A67D8; /* Indigo-600 */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: flex;
+    }
+}
+
+/* iPhone specific styling */
+@media (min-width: 375px) and (max-width: 667px) {
+    header h1 {
+        font-size: 4rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 3rem;
+    }
+
+    section p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 896px) {
+    header h1 {
+        font-size: 4.5rem;
+    }
+
+    header p {
+        font-size: 1.75rem;
+    }
+
+    section h2 {
+        font-size: 3.5rem;
+    }
+
+    section p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 896px) and (orientation: landscape) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 3rem;
+    }
+
+    section p {
+        font-size: 1.25rem;
+    }
+}
