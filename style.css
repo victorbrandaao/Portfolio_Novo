@@ -1,23 +1,120 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reset e variáveis globais */
+:root {
+    --primary-color: #5A67D8;
+    --secondary-color: #4A5568;
+    --bg-color: #f7fafc;
+    --text-color: #2d3748;
+    --transition-speed: 0.3s;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.icon {
-    margin-right: 10px;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Navegação */
+nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-link {
     text-transform: uppercase;
-    font-weight: bold;
-    color: #4A5568; /* Gray-700 */
-    transition: color 0.3s;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transition: all var(--transition-speed) ease-in-out;
+    position: relative;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-link:hover {
-    color: #5A67D8; /* Indigo-600 */
+    color: var(--primary-color);
 }
 
-/* Responsiveness */
+.icon {
+    margin-right: 0.625rem;
+    transition: transform var(--transition-speed);
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Animações */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Seções */
+section {
+    padding: 4rem 0;
+    transition: transform var(--transition-speed);
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* Cards */
+.project-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícones */
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -25,60 +122,64 @@ body {
 
     #mobile-menu {
         display: flex;
+        flex-direction: column;
+        transition: transform var(--transition-speed);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-link::after {
+        display: none;
     }
 }
 
-/* iPhone specific styling */
+/* iPhone e dispositivos móveis */
 @media (min-width: 375px) and (max-width: 667px) {
     header h1 {
-        font-size: 4rem;
+        font-size: clamp(2.5rem, 8vw, 4rem);
     }
 
     header p {
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 4vw, 1.5rem);
     }
 
     section h2 {
-        font-size: 3rem;
-    }
-
-    section p {
-        font-size: 1.25rem;
+        font-size: clamp(2rem, 6vw, 3rem);
     }
 }
 
-@media (min-width: 414px) and (max-width: 896px) {
-    header h1 {
-        font-size: 4.5rem;
-    }
-
-    header p {
-        font-size: 1.75rem;
-    }
-
-    section h2 {
-        font-size: 3.5rem;
-    }
-
-    section p {
-        font-size: 1.5rem;
+/* Otimização de performance */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
-@media (min-width: 414px) and (max-width: 896px) and (orientation: landscape) {
-    header h1 {
-        font-size: 3.5rem;
-    }
+/* Melhorias de Acessibilidade */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
 
-    header p {
-        font-size: 1.5rem;
-    }
+/* Utilitários */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
-    section h2 {
-        font-size: 3rem;
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a202c;
+        --text-color: #f7fafc;
+        --secondary-color: #a0aec0;
     }
-
-    section p {
-        font-size: 1.25rem;
+    
+    .project-card {
+        background: #2d3748;
     }
 }
